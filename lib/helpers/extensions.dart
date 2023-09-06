@@ -9,8 +9,8 @@ extension ContextUtils on BuildContext {
 extension ResponsiveSize on num {
   double get h => Utils.getScreenHeight(Utils.ctx!, this);
   double get w => Utils.getScreenWidth(Utils.ctx!, this);
-  double get ph => Utils.ctx!.screenHeight * this;
-  double get pw => Utils.ctx!.screenWidth * this;
+  double get ph => ((Utils.ctx!.screenHeight)) * this / 100;
+  double get pw => ((Utils.ctx!.screenWidth)) * this / 100;
   double get px => Utils.getpixelFontSize(Utils.ctx!, this);
   double get sp => Utils.getspFontSize(Utils.ctx!, this);
 }

@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:sizers/helpers/dimens.dart';
 import 'package:sizers/sizers.dart';
 
 void main() {
@@ -10,6 +13,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // log("calling");
+    // Sizers.setSizers(context: context);
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -17,6 +22,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // builder: (context, child) {
+      //   // log("x");
+      //   // Sizers.setSizers(context: context);
+      //   return SizedBox();
+      // },
     );
   }
 }
@@ -41,34 +51,42 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      Sizers.setSizers(context: context);
-    });
+    // TODO: implement initState
     super.initState();
   }
 
   @override
+  void didChangeDependencies() {
+    AdaptiveSizers.setSourceDeviceSize(
+        context: context, sourceWidth: 430, sourceHeight: 932);
+
+    super.didChangeDependencies();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    double defaultScreenWidth = 400;
+    double defaultScreenHeight = 932;
+
+    double screenWidth = 500;
+    double screenHeight = 700;
+
+    double boxWidth = 50;
+    double boxHeight = 50;
+
+    double boxWidthPercentage = (boxWidth / defaultScreenWidth) * 100;
+    double boxHeightPercentage = (boxHeight / defaultScreenHeight) * 100;
+    log('${screenWidth * (boxWidthPercentage / 100)}');
+    log('${screenHeight * (boxHeightPercentage / 100)}');
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            70.0.heightBox,
-            70.pWidthBox,
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
+      body: Container(
+        color: Colors.red,
+        height: 70.h,
+        width: 70.w,
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,

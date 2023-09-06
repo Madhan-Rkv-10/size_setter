@@ -1,30 +1,35 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 import '../sizers.dart';
 
 abstract class Utils {
   static BuildContext? ctx;
-  static double width = 430.0;
-  static double height = 932.0;
-  static setSizers({
+  static double? width;
+  static double? height;
+  static void setSizers({
     required BuildContext context,
-    required double? setupWidth,
-    required double? setupHeight,
+    double? setupWidth = 430.0,
+    double? setupHeight = 932,
   }) {
-    context = ctx!;
-    setupWidth = setupWidth;
-    setupHeight = setupHeight;
+    ctx = context;
+    width = setupWidth!;
+    height = setupHeight!;
   }
 
   // final context = Sizers.ctx;
   // final width = Sizers.setupWidth;
   // final height = Sizers.setupHeight;
   static double getScreenWidth(BuildContext context, num y) {
-    return context.screenWidth * (y / width);
+    log("setup width $width");
+
+    return context.screenWidth * (y / width!);
   }
 
   static double getScreenHeight(BuildContext context, num y) {
-    return context.screenHeight * (y / height);
+    log("setup height $height");
+    return context.screenHeight * (y / height!);
   }
 
   static double getpixelFontSize(
@@ -32,8 +37,8 @@ abstract class Utils {
     num referenceFontSize,
   ) {
     // Calculate scaling factors for width and height
-    double widthScaleFactor = context.screenWidth / width;
-    double heightScaleFactor = context.screenHeight / height;
+    double widthScaleFactor = context.screenWidth / width!;
+    double heightScaleFactor = context.screenHeight / height!;
 
     // Choose the smaller scaling factor to ensure the text fits within both dimensions
     double scaleFactor = widthScaleFactor < heightScaleFactor
@@ -54,8 +59,8 @@ abstract class Utils {
     double textScaleFactor = MediaQuery.of(context).textScaleFactor;
 
     // Calculate scaling factors for width and height
-    double widthScaleFactor = context.screenWidth / width;
-    double heightScaleFactor = context.screenHeight / width;
+    double widthScaleFactor = context.screenWidth / width!;
+    double heightScaleFactor = context.screenHeight / width!;
 
     // Choose the smaller scaling factor to ensure the text fits within both dimensions
     double scaleFactor = widthScaleFactor < heightScaleFactor
