@@ -10,21 +10,26 @@ abstract class Utils {
   static double? height;
   static void setSizers({
     required BuildContext context,
-    double? setupWidth = 430.0,
-    double? setupHeight = 932,
+    required double setupWidth,
+    required double setupHeight,
   }) {
     ctx = context;
     width = setupWidth!;
     height = setupHeight!;
   }
 
-  // final context = Sizers.ctx;
-  // final width = Sizers.setupWidth;
-  // final height = Sizers.setupHeight;
   static double getScreenWidth(BuildContext context, num y) {
     log("setup width $width");
 
     return context.screenWidth * (y / width!);
+  }
+
+  static double getEvenSize(
+    BuildContext? context,
+    num z,
+  ) {
+    return (context!.screenWidth * context.screenHeight) *
+        (z / (width! * height!));
   }
 
   static double getScreenHeight(BuildContext context, num y) {

@@ -41,20 +41,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
-
   @override
   void didChangeDependencies() {
     AdaptiveSizers.setSourceDeviceSize(
@@ -65,33 +51,24 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    double defaultScreenWidth = 400;
-    double defaultScreenHeight = 932;
-
-    double screenWidth = 500;
-    double screenHeight = 700;
-
-    double boxWidth = 50;
-    double boxHeight = 50;
-
-    double boxWidthPercentage = (boxWidth / defaultScreenWidth) * 100;
-    double boxHeightPercentage = (boxHeight / defaultScreenHeight) * 100;
-    log('${screenWidth * (boxWidthPercentage / 100)}');
-    log('${screenHeight * (boxHeightPercentage / 100)}');
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Container(
-        color: Colors.red,
-        height: 70.h,
-        width: 70.w,
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+      body: Column(
+        children: [
+          Container(
+            color: Colors.red,
+            height: 70.h,
+            width: 100.ph,
+          ),
+          Container(
+            color: Colors.blue,
+            height: 140.z,
+            width: 140.z,
+          ),
+        ],
       ),
     );
   }

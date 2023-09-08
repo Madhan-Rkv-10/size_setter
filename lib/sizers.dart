@@ -19,8 +19,8 @@ abstract class AdaptiveSizers {
   // late double? sourceWidth;
   static void setSourceDeviceSize({
     required BuildContext context,
-    double? sourceWidth = 430,
-    double? sourceHeight = 932,
+    double sourceWidth = 430,
+    double sourceHeight = 932,
   }) {
     log(context.toString());
     log(context.screenWidth.toString());
