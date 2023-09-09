@@ -30,7 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  sizers: 
+  size_setter: 
     path: ../  
 
 

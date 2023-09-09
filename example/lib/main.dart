@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sizers/sizers.dart';
+import 'package:size_setter/size_setter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   void didChangeDependencies() {
-    SizerUtils.setSourceDeviceSize(
+    SetSizerUtils.setSourceDeviceSize(
         context: context, sourceWidth: 430, sourceHeight: 932);
 
     super.didChangeDependencies();

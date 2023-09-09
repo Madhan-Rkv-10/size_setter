@@ -1,4 +1,4 @@
-library sizers;
+library size_setter;
 
 import 'dart:developer';
 
@@ -10,7 +10,7 @@ part './helpers/extensions.dart';
 part './helpers/widgets/height_sized_box.dart';
 part './helpers/widgets/width_sized_box.dart';
 
-abstract class SizerUtils {
+abstract class SetSizerUtils {
   static void setSourceDeviceSize({
     required BuildContext context,
     double sourceWidth = 430,
@@ -21,8 +21,8 @@ abstract class SizerUtils {
   }
 }
 
-class Sizers extends StatelessWidget {
-  const Sizers({
+class SetSizer extends StatelessWidget {
+  const SetSizer({
     Key? key,
     required this.child,
   }) : super(key: key);
@@ -30,7 +30,7 @@ class Sizers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: ((context, constraints) {
-      SizerUtils.setSourceDeviceSize(context: context);
+      SetSizerUtils.setSourceDeviceSize(context: context);
       return child;
     }));
   }

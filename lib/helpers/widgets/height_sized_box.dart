@@ -1,4 +1,4 @@
-part of sizers;
+part of size_setter;
 
 class HeightSpaceBox extends StatelessWidget {
   final num size;

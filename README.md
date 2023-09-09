@@ -1,8 +1,8 @@
-# Sizers
+# Size Setter
 
-Unlocking design adaptability, the sizers package for Flutter elegantly recalibrates pixels into responsive percentages, revolutionizing cross-device aesthetics with minimal effort. To learn more about this, please visit the following article [sizers](https://medium.com/p/b2c5a69e337/edit)
+Unlocking design adaptability, the size_setter package for Flutter elegantly recalibrates pixels into responsive percentages, revolutionizing cross-device aesthetics with minimal effort. To learn more about this, please visit the following article [size_setter](https://medium.com/p/b2c5a69e337/edit)
 
-## Why Behind Using the sizers Package
+## Why Behind Using the size_setter Package
  <ul>
  <li style="font-family:bold "> It converts pixel sizes to percentages, utilizing the source device width as a reference</li>
   <li style="font-family:bold "> The result is layouts that seamlessly adapt to various devices.</li>
@@ -16,7 +16,7 @@ Add to pubspec.yaml.
 ```dart
 dependencies:
   ...
-  sizers: ^1.0.0
+  size_setter: ^1.0.0
 ```
 
 # Parameters 
@@ -35,36 +35,36 @@ dependencies:
 
 ## Add the following import to your Dart code: 
 ```dart
-import 'package:sizers/sizers.dart';
+import 'package:size_setter/size_setter.dart';
 ```
 
 
-## Wrap MaterialApp with Sizers widget
+## Wrap MaterialApp with size_setter widget
 ```dart
-Sizers(
+SizeSetter(
       child:MaterialApp(),     
  )
 ```
 ### If you're developing your application using designs created in tools like Figma,Convert  your pixels into percenage based on  source device size, 
 ##### The default source device  is iphone14 pro max , device width is 430 px and height 932 px. 
 
-##### If your source device is different add size in Sizers
+##### If your source device is different add size in size_setter
 
 
 ```dart
-Sizers(
+SizeSetter(
     sourcewidth:430,
     sourceheight:840,
       child:MaterialApp(),   
  )
  ```
-## If you prefer not to wrap your MaterialApp in Sizers, you can follow these instructions.
+## If you prefer not to wrap your MaterialApp in SizeSetter, you can follow these instructions.
 Convert Your MaterialApp to StateFul Widget
 Add following code
 ```dart
  @override
   void didChangeDependencies() {
-    SizerUtils.setSourceDeviceSize(
+   SizeSetterUtils.setSourceDeviceSize(
         context: context,);
 
     super.didChangeDependencies();
@@ -112,7 +112,7 @@ Text(
 ```
 ## Issue and feedback 💭 
 
-If you have any suggestion for including a feature or if something doesn't work, feel free to open a Github [issue](https://github.com/Madhan-Rkv-10/sizers/issues) for us to have a discussion on it.
+If you have any suggestion for including a feature or if something doesn't work, feel free to open a Github [issue](https://github.com/Madhan-Rkv-10/size_setter/issues) for us to have a discussion on it.
 
 
 

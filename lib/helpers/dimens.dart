@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 
-import '../sizers.dart';
+import '../size_setter.dart';
 
 abstract class Utils {
   static BuildContext? ctx;

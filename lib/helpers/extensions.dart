@@ -1,4 +1,4 @@
-part of sizers;
+part of size_setter;
 
 extension ContextUtils on BuildContext {
   double get screenHeight => MediaQuery.of(this).size.height;
