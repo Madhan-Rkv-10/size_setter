@@ -14,8 +14,8 @@ abstract class Utils {
     required double setupHeight,
   }) {
     ctx = context;
-    width = setupWidth!;
-    height = setupHeight!;
+    width = setupWidth;
+    height = setupHeight;
   }
 
   static double getScreenWidth(BuildContext context, num y) {
