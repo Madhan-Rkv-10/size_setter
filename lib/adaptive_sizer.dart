@@ -4,7 +4,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 
-import 'package:sizers/helpers/dimens.dart';
+import './helpers/dimens.dart';
 
 part './helpers/extensions.dart';
 part './helpers/widgets/height_sized_box.dart';

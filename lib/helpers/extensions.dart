@@ -40,9 +40,19 @@ extension DynamicSizeBoxExtension on num {
 }
 
 extension PercentageSizeBoxExtension on num {
-  Widget get pWidthBox =>
-      SizedBox(width: Utils.ctx!.screenWidth * (this) / 100);
+  Widget get pWidthBox {
+    assert(
+      this > 0 && this <= 100,
+      'The value must be between 1 to 100',
+    );
+    return SizedBox(width: Utils.ctx!.screenWidth * (this) / 100);
+  }
 
-  Widget get pHeightBox =>
-      SizedBox(height: Utils.ctx!.screenHeight * (this) / 100);
+  Widget get pHeightBox {
+    assert(
+      this > 0 && this <= 100,
+      'The value must be between 1 to 100',
+    );
+    return SizedBox(height: Utils.ctx!.screenHeight * (this) / 100);
+  }
 }
