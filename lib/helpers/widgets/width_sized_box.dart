@@ -1,4 +1,4 @@
-part of adaptive_sizer;
+part of sizers;
 
 class WidthSpaceBox extends StatelessWidget {
   const WidthSpaceBox({Key? key, required this.size}) : super(key: key);

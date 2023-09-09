@@ -1,4 +1,4 @@
-library adaptive_sizer;
+library sizers;
 
 import 'dart:developer';
 
@@ -10,7 +10,7 @@ part './helpers/extensions.dart';
 part './helpers/widgets/height_sized_box.dart';
 part './helpers/widgets/width_sized_box.dart';
 
-abstract class AdaptiveSizers {
+abstract class SizerUtils {
   static void setSourceDeviceSize({
     required BuildContext context,
     double sourceWidth = 430,
@@ -21,8 +21,8 @@ abstract class AdaptiveSizers {
   }
 }
 
-class ApativeSizer extends StatelessWidget {
-  const ApativeSizer({
+class Sizers extends StatelessWidget {
+  const Sizers({
     Key? key,
     required this.child,
   }) : super(key: key);
@@ -30,7 +30,7 @@ class ApativeSizer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: ((context, constraints) {
-      AdaptiveSizers.setSourceDeviceSize(context: context);
+      SizerUtils.setSourceDeviceSize(context: context);
       return child;
     }));
   }
