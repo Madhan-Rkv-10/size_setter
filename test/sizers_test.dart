@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:mockito/mockito.dart';
-import 'package:sizers/sizers.dart';
+import 'package:sizers/adaptive_sizer.dart';
 
 void main() {
   // test('adds one to input values', () {

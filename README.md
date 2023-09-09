@@ -1,30 +1,7 @@
 # Adaptive Sizer
 
-<!-- <p align="center" >
-  <strong>Sizer is helps you to create responsive UI easily.</strong>
-  <br />
-  <br />
-  <a href="https://www.buymeacoffee.com/fluttersizer" target="_blank"><img width="180px" src="https://raw.githubusercontent.com/TechnoUrmish/Sizer/master/example/images/iv_buy_me_a_coffee.png" style="height: 51px !important;width: 217px !important;" ></a>
-</p>
+Unlocking design adaptability, the adaptive_sizer package for Flutter elegantly recalibrates pixels into responsive percentages, revolutionizing cross-device aesthetics with minimal effort. To learn more about this, please visit the following article [adaptive_sizer](https://medium.com/p/b2c5a69e337/edit)
 
-<br /> -->
-
-Unlocking design adaptability, the adaptive_sizer package for Flutter elegantly recalibrates pixels into responsive percentages, revolutionizing cross-device aesthetics with minimal effort.
-<!-- 
-![Alt Text](https://github.com/TechnoUrmish/Sizer/blob/master/example/images/img_ss_with_lib.png)
-
-![Alt Text](https://github.com/TechnoUrmish/Sizer/blob/master/example/images/img_ss_without_lib.png) -->
-
-# Content
-- [Description](#description)
-- [Installation](#installation)
-- [Parameters](#parameters)
-- [Suggestion]( #suggestion)
-- [Note](#note)
-
-<!-- # Existing User
-## Hello Existing users, I have updated the package for supporting Flutter 2.0 and solving many bugs then Whenever you update 1.x.x to 2.x.x will be got many errors so please update the package with the new below code.  -->
-# Description
 ## Why Behind Using the adaptive_sizer Package
  <ul>
  <li style="font-family:bold "> It converts pixel sizes to percentages, utilizing the source device width as a reference</li>
@@ -34,8 +11,6 @@ Unlocking design adaptability, the adaptive_sizer package for Flutter elegantly 
  </li>
  </ul>
  
-
-
 # Installation ⬇️
 Add to pubspec.yaml.
 ```dart
@@ -45,14 +20,16 @@ dependencies:
 ```
 
 # Parameters 
-* `.ph` - It Converts pixels into dynamic percentage based on source device height
-* `.pw` - It Converts pixels into dynamic percentage based on source device width
-* `.h` - Returns a calculated height based on the device
-* `.w` - Returns a calculated width based on the device
-* `.px` - Returns a calculated pixel based on the device
-* `.sp` - Returns a calculated sp based on the device
-*  `topPadding`- Returns a system status bar size
-*  `bottomPadding`-  Returns system intrusions on the bottom side of the screen
+* `.h` - It Converts pixels into dynamic percentage based on source device height
+* `.w` - It Converts pixels into dynamic percentage based on source device width
+* `.ph` - Returns a percentage  value of screen height
+* `.pw` - Returns a percentage  value of screen width
+* `.px` - Returns a calculated pixel based on the device for fonts
+* `.sp` - Returns a calculated sp based on the device for fonts
+*  `.heightBox` - Returns a calculated SizedBox with height
+*  `.widthBox` - Returns a calculated SizedBox with width
+*  `.pWidthBox` - Returns a calculated SizedBox with percentage of screenSize Width
+*  `.pWeightBox` - Returns a calculated SizedBox with percentage of screenSize Height
 
 # Usage 💻
 
@@ -84,7 +61,6 @@ AdaptiveSizer(
 ## If you prefer not to wrap your MaterialApp in AdaptiveSizer, you can follow these instructions.
 Convert Your MaterialApp to StateFul Widget
 Add following code
-<!-- and give setup device width and height <Strong>(Optional)<Strong> -->
 ```dart
  @override
   void didChangeDependencies() {
@@ -105,9 +81,7 @@ Add following code
     super.didChangeDependencies();
   }
 
-
 ```
-
 ## Widget Size 🕓
 ```dart
     Container(
@@ -136,18 +110,6 @@ Text(
     );
 
 ```
-
-<!-- # Note
-
-You need to import `sizer` package in order to access `number.h`, `number.w`, and `number.sp`
-
-**Auto import in VSCode and Android Studio doesn't work for dart extension methods.** Typing `10.h` would not bring up auto import suggestion for this package
-
-One workaround is to type `Device` so that the auto import suggestion would show up:
-```dart
-import 'package:adaptive_sizer/adaptive_sizer.dart';
-``` -->
-
 ## Issue and feedback 💭 
 
 If you have any suggestion for including a feature or if something doesn't work, feel free to open a Github [issue](https://github.com/Madhan-Rkv-10/adaptive_sizer/issues) for us to have a discussion on it.

@@ -1,8 +1,6 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
-import 'package:sizers/helpers/dimens.dart';
-import 'package:sizers/sizers.dart';
+import 'package:sizers/adaptive_sizer.dart';
+// import 'package:sizers/sizers.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,12 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      // builder: (context, child) {
-      //   // log("x");
-      //   // Sizers.setSizers(context: context);
-      //   return SizedBox();
-      // },
+      home: const MyHomePage(title: 'Adaptive Sizer'),
     );
   }
 }
@@ -63,11 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
             height: 70.h,
             width: 100.ph,
           ),
-          Container(
-            color: Colors.blue,
-            height: 140.z,
-            width: 140.z,
-          ),
+          20.widthBox,
         ],
       ),
     );

@@ -1,4 +1,4 @@
-part of sizers;
+part of adaptive_sizer;
 
 class HeightSpaceBox extends StatelessWidget {
   final num size;
@@ -9,6 +9,7 @@ class HeightSpaceBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Utils.getScreenHeight(context, size).widthBox;
+    return SizedBox(
+        height: Utils.getScreenHeight(context, double.parse(size.toString())));
   }
 }
