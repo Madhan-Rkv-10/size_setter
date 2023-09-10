@@ -1,4 +1,6 @@
 # Release Notes
+## 1.0.1
+       Updated README.md
 ## 1.0.0
   Added Height  and Width SizedBox extensions for gap with responsive size
         ```
