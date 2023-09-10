@@ -2,12 +2,12 @@
 
 Unlocking design adaptability, the size_setter package for Flutter elegantly recalibrates pixels into responsive percentages, revolutionizing cross-device aesthetics with minimal effort. To learn more about this, please visit the following article [size_setter](https://medium.com/p/b2c5a69e337/edit)
 
-## Why Behind Using the size_setter Package
+## Benefits 
  <ul>
- <li style="font-family:bold "> It converts pixel sizes to percentages, utilizing the source device width as a reference</li>
+ <li style="font-family:bold "> It converts pixel sizes to percentages, utilizing the source device size as a reference</li>
   <li style="font-family:bold "> The result is layouts that seamlessly adapt to various devices.</li>
   <li style="font-family:bold "> Based on the device, convert your numerical numbers to percentages. </li>
-  <li style="font-family:bold "> Calculate your screen status bar sizes based on devices in a simple manner.
+  <li style="font-family:bold "> A streamlined solution for the Space between the widgets.
  </li>
  </ul>
  
@@ -16,10 +16,10 @@ Add to pubspec.yaml.
 ```dart
 dependencies:
   ...
-  size_setter: ^1.0.0
+  size_setter: ^1.0.1
 ```
 
-# Parameters 
+# Parameters ⚙️
 * `.h` - It Converts pixels into dynamic percentage based on source device height
 * `.w` - It Converts pixels into dynamic percentage based on source device width
 * `.ph` - Returns a percentage  value of screen height
@@ -39,7 +39,7 @@ import 'package:size_setter/size_setter.dart';
 ```
 
 
-## Wrap MaterialApp with size_setter widget
+## Wrap MaterialApp with SizeSetter widget
 ```dart
 SizeSetter(
       child:MaterialApp(),     
@@ -59,7 +59,7 @@ SizeSetter(
  )
  ```
 ## If you prefer not to wrap your MaterialApp in SizeSetter, you can follow these instructions.
-Convert Your MaterialApp to StateFul Widget
+Convert Your MaterialApp to Stateful Widget
 Add following code
 ```dart
  @override
@@ -71,7 +71,7 @@ Add following code
   }
 
 ```
-  #### If You want to setup your souce device size
+  #### If you wish to configure the dimensions of your source device.
 ```dart
  @override
   void didChangeDependencies() {
@@ -85,18 +85,61 @@ Add following code
 ## Widget Size 🕓
 ```dart
     Container(
-      width: 20.w,    //It will take a 20% of screen width
-      height:30.h     //It will take a 30% of screen height
+      width: 20.pw,    //It will take a 20% of screen width
+      height:30.ph     //It will take a 30% of screen height
     )
 ```
-## what if you have pixels and how to calculate percentage 
+## Covert your pixels into resposive size without MediaQueries 
+
+
 ```dart
 SizedBox(
-      width: 200.pw,    //It will convert pixels into adaptive percentage based on source device width
-      height:30.ph     //It will convert pixels into adaptive percentage based on source device width
+      width: 200.w,    //It will convert pixels into responsive percentage based on source device width
+      height:300.h     //It will convert pixels into responsive percentage based on source device width
     )
 ```
-## Font size 
+## Gap between the widgets
+ - `.pWidthBox` - it returns a gap with a percentage of the screen width size
+```
+dart
+    //Before
+    SizedBox(
+    width:MediaQuery.of(context).size.screenWidth*0.7
+    )
+    //After
+    70.pWidthBox 
+```
+ - `.pHeigthBox` - it returns a gap with a percentage of the screen width size
+```
+dart
+    //Before
+    SizedBox(
+    width:MediaQuery.of(context).size.screenHeight*0.7
+    )
+    //After
+    70.pHeightBox
+   ``` 
+  `.heightBox` - it returns a gap with a dynamic size height, mainly used to make it responsive.
+  ```
+  dart
+      //Before
+    SizedBox(
+    height:200.h
+    )
+    //After
+    200.heightBox
+```   
+`.widthBox` - it returns a gap with a dynamic size width, mainly used to make it responsive.
+```
+    dart
+    //Before
+    SizedBox(
+    width:200.w
+    )
+    //After
+    200.widthBox
+```
+## Font size ✍️
 <li> <Strong>sp</Strong> stands for "scale-independent pixels". It is a relative unit that is independent of the screen's physical pixel density. This means that an sp value will be rendered at the same size on all screens, regardless of their pixel density.
 <li><Strong>px</Strong> stands for "pixels". It is an absolute unit that refers to the actual number of pixels on the screen. This means that a px value will be rendered at a different size on screens with different pixel densities
 
