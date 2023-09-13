@@ -1,6 +1,6 @@
 # Size Setter
 
-Unlocking design adaptability, the size_setter package for Flutter elegantly recalibrates pixels into responsive percentages, revolutionizing cross-device aesthetics with minimal effort. To learn more about this, please visit the following article [size_setter](https://medium.com/p/b2c5a69e337/edit)
+Unlocking design adaptability, the size_setter package for Flutter elegantly recalibrates pixels into responsive percentages, revolutionizing cross-device aesthetics with minimal effort. To learn more about this, please visit the following article [size_setter](https://medium.com/@madhanrkv10/new-package-for-your-responsive-flutter-app-development-b2c5a69e337)
 
 ## Benefits 
  <ul>
