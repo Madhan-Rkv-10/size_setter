@@ -15,7 +15,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   void didChangeDependencies() {
-    SetSizerUtils.setSourceDeviceSize(
+    SizeSetterUtils.setSourceDeviceSize(
         context: context, sourceWidth: 430, sourceHeight: 932);
 
     super.didChangeDependencies();
