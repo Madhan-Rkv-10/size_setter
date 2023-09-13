@@ -1,4 +1,6 @@
 # Release Notes
+## 1.0.2
+       Added Description
 ## 1.0.1
        Updated README.md
 ## 1.0.0
