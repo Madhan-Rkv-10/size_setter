@@ -75,7 +75,7 @@ Add following code
 ```dart
  @override
   void didChangeDependencies() {
-    SizerUtils.setSourceDeviceSize(
+    SizeSetterUtils.setSourceDeviceSize(
         context: context,sourceWidth: 300,  sourceHeight: 700);
 
     super.didChangeDependencies();
