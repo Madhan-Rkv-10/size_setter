@@ -16,7 +16,7 @@ Add to pubspec.yaml.
 ```dart
 dependencies:
   ...
-  size_setter: ^1.0.4
+  size_setter: ^1.0.5
 ```
 
 # Parameters ⚙️

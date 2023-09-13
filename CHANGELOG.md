@@ -1,6 +1,8 @@
 # Release Notes
+## 1.0.5
+    Added Exceptions 
 ## 1.0.4
-      Updated CHAGELOG.md
+      Updated CHANGELOG.md
 ## 1.0.3
        Added Article
 ## 1.0.2
