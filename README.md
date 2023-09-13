@@ -100,8 +100,7 @@ SizedBox(
 ```
 ## Gap between the widgets
  - `.pWidthBox` - it returns a gap with a percentage of the screen width size
-```
-dart
+```dart
     //Before
     SizedBox(
     width:MediaQuery.of(context).size.screenWidth*0.7
@@ -110,8 +109,7 @@ dart
     70.pWidthBox 
 ```
  - `.pHeigthBox` - it returns a gap with a percentage of the screen width size
-```
-dart
+```dart
     //Before
     SizedBox(
     width:MediaQuery.of(context).size.screenHeight*0.7
@@ -120,8 +118,7 @@ dart
     70.pHeightBox
    ``` 
   `.heightBox` - it returns a gap with a dynamic size height, mainly used to make it responsive.
-  ```
-  dart
+  ```dart
       //Before
     SizedBox(
     height:200.h
@@ -130,8 +127,7 @@ dart
     200.heightBox
 ```   
 `.widthBox` - it returns a gap with a dynamic size width, mainly used to make it responsive.
-```
-    dart
+```dart
     //Before
     SizedBox(
     width:200.w
