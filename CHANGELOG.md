@@ -1,47 +1,58 @@
 # Release Notes
+## 1.0.4
+      Updated CHAGELOG.md
 ## 1.0.3
        Added Article
 ## 1.0.2
        Added Description
+
 ## 1.0.1
        Updated README.md
 ## 1.0.0
-  Added Height  and Width SizedBox extensions for gap with responsive size
-        ```
-        dart
-            //Before
+  Added Height  and Width SizedBox extensions for gap with responsive size 
+
+
+```dart
             SizedBox(
             width:200.w
             )
-            //After
+            //or
             200.widthBox
-        ```
+
+            // for responsive SizedBox with Height
+            SizedBox(
+            height:200.h
+            )
+            //or
+            200.heightBox
+```
  ## 0.1.1
  Added Font Extensions
-    ```
-        dart
-            Text(
+
+```dart
+Text(
             'Hello World',style: TextStyle(fontSize: 15.sp),
             );
             //or
             Text(
             'Hello World',style: TextStyle(fontSize: 15.px),
             );
+```
 
-    ``` 
  ## 0.1.0
 <li> Added extensions for responsive  width and height based o Source Device <br>
 <li> <b>Breaking Change :<b> Now you can initialize in StatefulWidget</li>
-     ```
-      dart
-       @override
-       void didChangeDependencies() {
-        AdaptiveSizers.setSourceDeviceSize(
+
+```dart
+   @override
+  void didChangeDependencies() {
+   SizeSetterUtils.setSourceDeviceSize(
         context: context,);
 
-       super.didChangeDependencies();
-       }
-    ```
+    super.didChangeDependencies();
+  }
+  ```
+
 ## 0.0.5
  Updated package Initilization in Stateless Widget
  ## 0.0.4

@@ -16,7 +16,7 @@ Add to pubspec.yaml.
 ```dart
 dependencies:
   ...
-  size_setter: ^1.0.3
+  size_setter: ^1.0.4
 ```
 
 # Parameters ⚙️
@@ -29,7 +29,7 @@ dependencies:
 *  `.heightBox` - Returns a calculated SizedBox with height
 *  `.widthBox` - Returns a calculated SizedBox with width
 *  `.pWidthBox` - Returns a calculated SizedBox with percentage of screenSize Width
-*  `.pWeightBox` - Returns a calculated SizedBox with percentage of screenSize Height
+*  `.pHeightBox` - Returns a calculated SizedBox with percentage of screenSize Height
 
 # Usage 💻
 
