@@ -4,21 +4,21 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 
-import './helpers/dimens.dart';
-
 part './helpers/extensions.dart';
 part './helpers/widgets/height_sized_box.dart';
 part './helpers/widgets/width_sized_box.dart';
+part './helpers/dimens.dart';
 
 /// This is a class which is used to set the  Source device size from  Stateful widget
 /// for Example
 /// @override
+/// ``` dart
 /// void didChangeDependencies() {
-///   SizeSetterUtils.setSourceDeviceSize(
-//       context: context,sourceWidth: 300,  sourceHeight: 700);
-
-//   super.didChangeDependencies();
-// }
+///    SizeSetterUtils.setSourceDeviceSize(
+///       context: context,sourceWidth: 300,  sourceHeight: 700);
+///   super.didChangeDependencies();
+/// }
+/// ```
 abstract class SizeSetterUtils {
   static void setSourceDeviceSize({
     required BuildContext context,
@@ -31,7 +31,7 @@ abstract class SizeSetterUtils {
   }
 }
 
-/// This Class which is used to initialize the  size_setter package from Stateless class
+/// This Class which is used to initialize the  size_setter package from Stateless Widget
 class SizeSetter extends StatelessWidget {
   const SizeSetter({
     Key? key,

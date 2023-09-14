@@ -1,5 +1,6 @@
 part of size_setter;
 
+/// It returns responsive Gap based on respective width value
 class HeightSpaceBox extends StatelessWidget {
   final num size;
   const HeightSpaceBox({

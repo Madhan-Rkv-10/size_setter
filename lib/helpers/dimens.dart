@@ -1,8 +1,6 @@
-import 'dart:developer';
+// import 'dart:developer';
 
-import 'package:flutter/material.dart';
-
-import '../size_setter.dart';
+part of size_setter;
 
 abstract class Utils {
   static BuildContext? ctx;
@@ -19,7 +17,7 @@ abstract class Utils {
   }
 
   static double getScreenWidth(BuildContext context, num y) {
-    log("setup width $width");
+    log("Source Device   width $width and Height $height");
 
     return context.screenWidth * (y / width!);
   }

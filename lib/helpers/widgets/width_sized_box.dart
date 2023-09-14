@@ -1,5 +1,7 @@
 part of size_setter;
 
+/// It returns responsive Gap based on respective width value
+
 class WidthSpaceBox extends StatelessWidget {
   const WidthSpaceBox({Key? key, required this.size}) : super(key: key);
   final num size;
@@ -11,9 +13,3 @@ class WidthSpaceBox extends StatelessWidget {
     );
   }
 }
-
-// extension SizeBoxExtension on num {
-//   Widget get widthSizedBox => SizedBox(width: double.parse(toString()));
-
-//   Widget get heightSizedBox => SizedBox(height: double.parse(toString()));
-// }
