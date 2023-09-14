@@ -1,8 +1,10 @@
 # Release Notes
+## 1.0.6
+       Added API reference 
 ## 1.0.5
-    Added Exceptions 
+       Added Exceptions 
 ## 1.0.4
-      Updated CHANGELOG.md
+       Updated CHANGELOG.md
 ## 1.0.3
        Added Article
 ## 1.0.2
