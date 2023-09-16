@@ -16,7 +16,7 @@ Add to pubspec.yaml.
 ```dart
 dependencies:
   ...
-  size_setter: ^1.0.6
+  size_setter: ^1.0.7
 ```
 
 # Parameters ⚙️
@@ -53,8 +53,8 @@ SizeSetter(
 
 ```dart
 SizeSetter(
-    sourcewidth:430,
-    sourceheight:840,
+    sourceWidth:430,
+    sourceHeight:840,
       child:MaterialApp(),   
  )
  ```
@@ -101,38 +101,36 @@ SizedBox(
 ## Gap between the widgets
  - `.pWidthBox` - it returns a gap with a percentage of the screen width size
 ```dart
-    //Before
+  
     SizedBox(
     width:MediaQuery.of(context).size.screenWidth*0.7
     )
-    //After
+    //or
     70.pWidthBox 
 ```
  - `.pHeigthBox` - it returns a gap with a percentage of the screen width size
 ```dart
-    //Before
     SizedBox(
     width:MediaQuery.of(context).size.screenHeight*0.7
     )
-    //After
+    //or
     70.pHeightBox
    ``` 
   `.heightBox` - it returns a gap with a dynamic size height, mainly used to make it responsive.
   ```dart
-      //Before
+     
     SizedBox(
     height:200.h
     )
-    //After
+    //ore
     200.heightBox
 ```   
 `.widthBox` - it returns a gap with a dynamic size width, mainly used to make it responsive.
 ```dart
-    //Before
     SizedBox(
     width:200.w
     )
-    //After
+    //or
     200.widthBox
 ```
 ## Font size ✍️
