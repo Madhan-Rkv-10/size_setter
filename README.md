@@ -16,7 +16,7 @@ Add to pubspec.yaml.
 ```dart
 dependencies:
   ...
-  size_setter: ^1.0.7
+  size_setter: ^1.0.8
 ```
 
 # Parameters ⚙️
@@ -122,7 +122,7 @@ SizedBox(
     SizedBox(
     height:200.h
     )
-    //ore
+    //or
     200.heightBox
 ```   
 `.widthBox` - it returns a gap with a dynamic size width, mainly used to make it responsive.

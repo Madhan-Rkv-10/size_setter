@@ -1,5 +1,6 @@
 # Release Notes
-
+## 1.0.8
+       Updated API reference 
 ## 1.0.7
        Updated API reference 
 ## 1.0.6
