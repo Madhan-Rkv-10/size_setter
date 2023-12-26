@@ -1,6 +1,6 @@
 name: size_setter
 description: This package is used to develop flutter app more responsive , It also provides  responsive sizedbox based o source device size
-version: 1.0.8
+version: 1.0.9
 homepage: https://github.com/Madhan-Rkv-10/size_setter
 
 environment:
