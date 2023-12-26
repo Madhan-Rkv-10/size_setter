@@ -54,24 +54,24 @@ abstract class Utils {
     return dynamicFontSize;
   }
 
-  static double getspFontSize(
+  static double getSpFontSize(
     BuildContext context,
     num referenceFontSize,
   ) {
-    // Get the textScaleFactor from the MediaQuery to consider the user's font size setting
-    double textScaleFactor = MediaQuery.of(context).textScaleFactor;
+    // Access the TextScaler for the current context
+    final TextScaler scaler = MediaQuery.textScalerOf(context);
 
-    // Calculate scaling factors for width and height
+    // Calculate scaling factors for width and height (unchanged)
     double widthScaleFactor = context.screenWidth / width!;
     double heightScaleFactor = context.screenHeight / width!;
 
-    // Choose the smaller scaling factor to ensure the text fits within both dimensions
+    // Choose the smaller scaling factor (unchanged)
     double scaleFactor = widthScaleFactor < heightScaleFactor
         ? widthScaleFactor
         : heightScaleFactor;
 
-    // Calculate the dynamic font size in scaled pixels (sp)
-    double dynamicFontSize = referenceFontSize * scaleFactor * textScaleFactor;
+    // Calculate the dynamic font size using TextScaler
+    double dynamicFontSize = scaler.scale(referenceFontSize * scaleFactor);
 
     return dynamicFontSize;
   }
