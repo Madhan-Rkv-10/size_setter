@@ -1,4 +1,6 @@
 # Release Notes
+## 1.0.9
+       Updated flutter_lints
 ## 1.0.8
        Updated API reference 
 ## 1.0.7
