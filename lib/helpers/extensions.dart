@@ -46,7 +46,7 @@ extension ResponsiveSize on num {
 
   /// It returns responsive fot size in scalar independent pixels
 
-  double get sp => Utils.getspFontSize(Utils.ctx!, this);
+  double get sp => Utils.getSpFontSize(Utils.ctx!, this);
 }
 
 extension DynamicSizeBoxExtension on num {
