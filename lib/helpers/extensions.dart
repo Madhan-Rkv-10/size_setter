@@ -1,4 +1,4 @@
-part of size_setter;
+part of '../size_setter.dart';
 
 extension ContextUtils on BuildContext {
   /// It returns screen height
