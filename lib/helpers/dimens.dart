@@ -1,6 +1,6 @@
 // import 'dart:developer';
 
-part of size_setter;
+part of '../size_setter.dart';
 
 abstract class Utils {
   static BuildContext? ctx;
@@ -17,7 +17,7 @@ abstract class Utils {
   }
 
   static double getScreenWidth(BuildContext context, num y) {
-    log("Source Device   width $width and Height $height");
+    // log("Source Device   width $width and Height $height");
 
     return context.screenWidth * (y / width!);
   }
@@ -31,7 +31,7 @@ abstract class Utils {
   }
 
   static double getScreenHeight(BuildContext context, num y) {
-    log("setup height $height");
+    // log("setup height $height");
     return context.screenHeight * (y / height!);
   }
 

@@ -34,9 +34,9 @@ abstract class SizeSetterUtils {
 /// This Class which is used to initialize the  size_setter package from Stateless Widget
 class SizeSetter extends StatelessWidget {
   const SizeSetter({
-    Key? key,
+    super.key,
     required this.child,
-  }) : super(key: key);
+  });
   final Widget child;
   @override
   Widget build(BuildContext context) {

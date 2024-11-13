@@ -1,9 +1,9 @@
-part of size_setter;
+part of '../../size_setter.dart';
 
 /// It returns responsive Gap based on respective width value
 
 class WidthSpaceBox extends StatelessWidget {
-  const WidthSpaceBox({Key? key, required this.size}) : super(key: key);
+  const WidthSpaceBox({super.key, required this.size});
   final num size;
 
   @override
